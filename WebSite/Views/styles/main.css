@@ -1,0 +1,39 @@
+﻿
+body
+{
+  font-size: 12px;
+  margin: 5px;
+}
+
+.list
+{
+  border: 1px solid #888888;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+  .list td
+  {
+    border: 1px solid #888888;
+    padding: 10px;
+  }
+
+  .list thead
+  {
+    font-weight: bold;
+    background-color: #CCCCCC;
+  }
+
+.bar
+{
+  border: 1px solid #9999FF;
+  background-color: #EEF3FF;
+  padding: 10px;
+  margin: 5px;
+}
+
+  .bar .action
+  {
+    float: right;
+  }

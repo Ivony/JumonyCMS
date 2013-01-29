@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>JumonyCore</id>
+    <version>2.3.0</version>
+    <title>Jumony Core</title>
+    <authors>Ivony</authors>
+    <owners>Ivony</owners>
+    <licenseUrl>http://jumony.codeplex.com/license</licenseUrl>
+    <projectUrl>http://jumony.codeplex.com/</projectUrl>
+    <iconUrl>http://pic.cnblogs.com/avatar/a14218.jpg</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Jumony gives you the ability to manipulate the HTML</description>
+    <language>zh-CN</language>
+    <tags>HTML Web</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework3.5" />
+    </frameworkAssemblies>
+    <references>
+      <reference file="Ivony.Core.dll" />
+      <reference file="Ivony.Html.dll" />
+      <reference file="Ivony.Html.Parser.dll" />
+      <reference file="Ivony.Html.Parser.Regulars.dll" />
+    </references>
+  </metadata>
+</package>
