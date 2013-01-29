@@ -21,7 +21,7 @@ namespace Jumony.ConentManager
     public ActionResult List()
     {
 
-      return View( "List", dbUtility.Data( "SELECT filepath FROM Templates" ).Column<string>() );
+      return View( "List", dbUtility.Data( "SELECT virtualPath FROM Templates" ).Column<string>() );
 
     }
 
@@ -29,9 +29,9 @@ namespace Jumony.ConentManager
     {
       var directory = HostingEnvironment.VirtualPathProvider.GetDirectory( VirtualPathUtility.ToAbsolute( templatePath ) );
 
-      var data = new HashSet<string>( dbUtility.Data( "SELECT filepath FROM Templates " ).Column<string>(), StringComparer.OrdinalIgnoreCase );
+      var data = new HashSet<string>( dbUtility.Data( "SELECT virtualPath FROM Templates " ).Column<string>(), StringComparer.OrdinalIgnoreCase );
 
-      var local = new HashSet<string>( SearchFiles( directory ).Select( f => f.VirtualPath ) );
+      var local = new HashSet<string>( SearchFiles( directory ).Select( f => VirtualPathUtility.ToAppRelative( f.VirtualPath ) ) );
 
       foreach ( var virtualPath in local.Except( data ) )
         dbUtility.NonQuery( "INSERT INTO Templates ( virtualPath ) VALUES ( {0} )", virtualPath );

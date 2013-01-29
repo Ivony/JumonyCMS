@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ivony.Html.JQuery</name>
+    </assembly>
+    <members>
+        <member name="T:Ivony.Html.jQuery">
+            <summary>
+            jQuery 对象，提供 jQuery API 实现
+            </summary>
+        </member>
+        <member name="M:Ivony.Html.jQuery.#ctor(System.String,Ivony.Html.IHtmlContainer)">
+            <summary>
+            创建 jQuery 对象
+            </summary>
+            <param name="selector">选择器</param>
+            <param name="scope">范畴限定</param>
+        </member>
+    </members>
+</doc>

@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
-    <id>JumonyCore</id>
-    <version>2.3.0</version>
-    <title>Jumony Core</title>
+    <id>Jumony</id>
+    <version>2.5.0.0-alpha</version>
+    <title />
     <authors>Ivony</authors>
     <owners>Ivony</owners>
     <licenseUrl>http://jumony.codeplex.com/license</licenseUrl>
     <projectUrl>http://jumony.codeplex.com/</projectUrl>
     <iconUrl>http://pic.cnblogs.com/avatar/a14218.jpg</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Jumony gives you the ability to manipulate the HTML</description>
-    <language>zh-CN</language>
-    <tags>HTML Web</tags>
-    <frameworkAssemblies>
-      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework4.0" />
-      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework3.5" />
-    </frameworkAssemblies>
+    <description>Jumony</description>
     <references>
       <reference file="Ivony.Core.dll" />
       <reference file="Ivony.Html.dll" />
+      <reference file="Ivony.Html.Forms.dll" />
+      <reference file="Ivony.Html.JQuery.dll" />
       <reference file="Ivony.Html.Parser.dll" />
       <reference file="Ivony.Html.Parser.Regulars.dll" />
+      <reference file="Ivony.Html.Styles.dll" />
+      <reference file="Ivony.Html.Templates.dll" />
+      <reference file="Ivony.Html.Web.dll" />
+      <reference file="Ivony.Html.Web.Mvc.dll" />
     </references>
   </metadata>
 </package>

@@ -99,6 +99,32 @@
             <param name="conflictRule">与之相冲突的规则，如果有的话</param>
             <returns>是否成功</returns>
         </member>
+        <member name="T:Ivony.Html.Web.Mvc.ContentAdapter">
+            <summary>
+            默认的内容视图渲染代理
+            </summary>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.ContentAdapter.#ctor(Ivony.Html.Web.Mvc.JumonyView)">
+            <summary>
+            创建 ContentAdapter 对象
+            </summary>
+            <param name="view">要渲染的内容视图</param>
+        </member>
+        <member name="P:Ivony.Html.Web.Mvc.ContentAdapter.View">
+            <summary>
+            获取内容视图
+            </summary>
+        </member>
+        <member name="P:Ivony.Html.Web.Mvc.ContentAdapter.Document">
+            <summary>
+            获取内容视图文档
+            </summary>
+        </member>
+        <member name="P:Ivony.Html.Web.Mvc.ContentAdapter.RenderAdapters">
+            <summary>
+            获取内容视图的渲染代理
+            </summary>
+        </member>
         <member name="T:Ivony.Html.Web.Mvc.ControllerCachePolicyProvider">
             <summary>
             IMvcCachePolicyProvider 的一个标准抽象实现
@@ -162,9 +188,19 @@
             <param name="controllerName">控制器名称</param>
             <returns>该控制器的缓存策略提供程序，如果有的话</returns>
         </member>
+        <member name="T:Ivony.Html.Web.Mvc.GenericMasterView">
+            <summary>
+            JumonyMasterView 的标准实现
+            </summary>
+        </member>
         <member name="T:Ivony.Html.Web.Mvc.JumonyMasterView">
             <summary>
             母板页视图
+            </summary>
+        </member>
+        <member name="T:Ivony.Html.Web.Mvc.JumonyView">
+            <summary>
+            Jumony 视图
             </summary>
         </member>
         <member name="T:Ivony.Html.Web.Mvc.ViewBase">
@@ -336,6 +372,24 @@
             可使用母板页的内容视图
             </summary>
         </member>
+        <member name="M:Ivony.Html.Web.Mvc.IContentView.InitializeMaster(Ivony.Html.Web.Mvc.IMasterView)">
+            <summary>
+            初始化母板
+            </summary>
+            <param name="master">母板视图</param>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.IContentView.CreateContentAdapter(Ivony.Html.Web.Mvc.IMasterView)">
+            <summary>
+            创建内容渲染代理
+            </summary>
+            <param name="master">所使用的母板视图</param>
+            <returns>用于渲染内容视图的渲染代理</returns>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.JumonyView.#ctor">
+            <summary>
+            创建 JumonyView 对象
+            </summary>
+        </member>
         <member name="M:Ivony.Html.Web.Mvc.JumonyView.RenderCore(Ivony.Html.IHtmlContainer)">
             <summary>
             处理和渲染指定 HTML 范畴
@@ -385,13 +439,13 @@
             </summary>
             <param name="MasterView">页面的母板视图</param>
         </member>
-        <member name="M:Ivony.Html.Web.Mvc.JumonyView.RenderContent(Ivony.Html.IHtmlAdapter[])">
+        <member name="M:Ivony.Html.Web.Mvc.JumonyView.RenderContent(Ivony.Html.IHtmlRenderAdapter[])">
             <summary>
             渲染 HTML 内容
             </summary>
             <returns>渲染结果</returns>
         </member>
-        <member name="M:Ivony.Html.Web.Mvc.JumonyView.RenderContent(Ivony.Html.IHtmlContainer,System.Boolean,Ivony.Html.IHtmlAdapter[])">
+        <member name="M:Ivony.Html.Web.Mvc.JumonyView.RenderContent(Ivony.Html.IHtmlContainer,System.Boolean,Ivony.Html.IHtmlRenderAdapter[])">
             <summary>
             渲染 HTML 内容。
             </summary>
@@ -431,6 +485,24 @@
             <summary>
             自定义渲染过程的 HTML 转换器
             </summary>
+        </member>
+        <member name="T:Ivony.Html.Web.Mvc.IMasterView">
+            <summary>
+            定义母板视图
+            </summary>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.IMasterView.Initialize(System.Web.Mvc.ViewContext)">
+            <summary>
+            初始化母板视图
+            </summary>
+            <param name="context">视图上下文</param>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.IMasterView.Render(Ivony.Html.Web.Mvc.IContentView)">
+            <summary>
+            渲染母板视图
+            </summary>
+            <param name="view">内容视图</param>
+            <returns>渲染结果</returns>
         </member>
         <member name="M:Ivony.Html.Web.Mvc.JumonyMasterView.Initialize(System.String)">
             <summary>
@@ -666,6 +738,12 @@
             <param name="element">要获取分析路由值的元素</param>
             <returns>获取的路由值</returns>
         </member>
+        <member name="M:Ivony.Html.Web.Mvc.JumonyUrlHelper.ResolveUri(Ivony.Html.IHtmlContainer)">
+            <summary>
+            转换容器中所有 URI 与当前请求匹配。
+            </summary>
+            <param name="container">确定要转换 URI 范围的容器</param>
+        </member>
         <member name="M:Ivony.Html.Web.Mvc.JumonyUrlHelper.ResolveUri(Ivony.Html.IHtmlContainer,System.String)">
             <summary>
             转换容器中所有 URI 与当前请求匹配。
@@ -691,6 +769,11 @@
         <member name="P:Ivony.Html.Web.Mvc.JumonyUrlHelper.VirtualPath">
             <summary>
             视图基路径
+            </summary>
+        </member>
+        <member name="T:Ivony.Html.Web.Mvc.MasterViewHandler">
+            <summary>
+            母板视图控制程序的基类
             </summary>
         </member>
         <member name="T:Ivony.Html.Web.Mvc.MvcCachePolicyProviderWrapper">
@@ -728,6 +811,32 @@
             <summary>
             指示是否禁止生成generator的meta标签，默认是 false 。
             </summary>
+        </member>
+        <member name="P:Ivony.Html.Web.Mvc.MvcConfiguration.FallbackDefaultMaster">
+            <summary>
+            指示视图引擎查找默认母板时是否应上溯查找，默认是false，即只在本文件夹查找，不上溯到父级文件夹。
+            </summary>
+        </member>
+        <member name="T:Ivony.Html.Web.Mvc.MvcFormExtensions">
+            <summary>
+            有关 MVC 的一些表单方法扩展
+            </summary>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.MvcFormExtensions.ApplyValues(Ivony.Html.Forms.HtmlForm,System.Object)">
+            <summary>
+            在表单上应用指定模型的值
+            </summary>
+            <param name="form">要应用的表单</param>
+            <param name="dataModel">要应用的模型值</param>
+            <returns>返回表单，便于链式调用</returns>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.MvcFormExtensions.ApplyValues(Ivony.Html.Forms.HtmlForm,System.Web.Mvc.IValueProvider)">
+            <summary>
+            在表单上应用指定值提供程序的值
+            </summary>
+            <param name="form">要应用的表单</param>
+            <param name="valueProvider">提供值的 ValueProvider 实例</param>
+            <returns>返回表单，便于链式调用</returns>
         </member>
         <member name="T:Ivony.Html.Web.Mvc.MvcFormValidator">
             <summary>
@@ -812,12 +921,12 @@
             </summary>
             <param name="view">需要渲染部分视图的宿主视图</param>
         </member>
-        <member name="M:Ivony.Html.Web.Mvc.PartialRenderAdapter.Render(Ivony.Html.IHtmlElement,System.IO.TextWriter)">
+        <member name="M:Ivony.Html.Web.Mvc.PartialRenderAdapter.Render(Ivony.Html.IHtmlElement,Ivony.Html.HtmlRenderContext)">
             <summary>
             渲染 partial 标签
             </summary>
             <param name="element">partial 标签</param>
-            <param name="writer">用于渲染的文本编写器</param>
+            <param name="context">渲染上下文</param>
         </member>
         <member name="M:Ivony.Html.Web.Mvc.PartialRenderAdapter.RenderPartial(Ivony.Html.IHtmlElement,System.IO.TextWriter)">
             <summary>
@@ -841,9 +950,19 @@
             <param name="partialElement">partial 元素</param>
             <returns></returns>
         </member>
+        <member name="P:Ivony.Html.Web.Mvc.PartialRenderAdapter.ViewContext">
+            <summary>
+            当前视图上下文
+            </summary>
+        </member>
+        <member name="P:Ivony.Html.Web.Mvc.PartialRenderAdapter.Url">
+            <summary>
+            当前 Url 帮助器
+            </summary>
+        </member>
         <member name="P:Ivony.Html.Web.Mvc.PartialRenderAdapter.CssSelector">
             <summary>
-            一个 CSS 选择器，用于选取 partial 标签
+            重写 CssSelector 属性，用于选取 partial 标签
             </summary>
         </member>
         <member name="T:Ivony.Html.Web.Mvc.RouteExtensions">
@@ -1333,16 +1452,77 @@
             </summary>
             <param name="context"></param>
         </member>
-        <member name="M:Ivony.Html.Web.Mvc.ViewElementAdapter.Render(Ivony.Html.IHtmlElement,System.IO.TextWriter)">
+        <member name="M:Ivony.Html.Web.Mvc.ViewElementAdapter.Render(Ivony.Html.IHtmlElement,Ivony.Html.HtmlRenderContext)">
             <summary>
             渲染 view 标签
             </summary>
             <param name="element">view 标签元素</param>
-            <param name="writer">HTML 编写器</param>
+            <param name="context">渲染上下文</param>
         </member>
         <member name="P:Ivony.Html.Web.Mvc.ViewElementAdapter.CssSelector">
             <summary>
             用于匹配 view 标签的 CSS 选择器
+            </summary>
+        </member>
+        <member name="T:Ivony.Html.Web.Mvc.ViewFilterHandler">
+            <summary>
+            路径依赖视图筛选器的基类，通过在指定虚拟路径放置_filter.ashx文件，并继承此类型实现路径依赖的视图筛选器
+            </summary>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.ViewFilterHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            重写 ProcessRequest 方法，始终抛出 NotFound 异常。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.ViewFilterHandler.OnPreProcess(System.Web.Mvc.ViewContext,Ivony.Html.Web.Mvc.JumonyView)">
+            <summary>
+            当视图被处理前执行
+            </summary>
+            <param name="context">当前视图上下文</param>
+            <param name="view">正在处理的视图</param>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.ViewFilterHandler.OnPostProcess(System.Web.Mvc.ViewContext,Ivony.Html.Web.Mvc.JumonyView)">
+            <summary>
+            当视图被处理后执行
+            </summary>
+            <param name="context">当前视图上下文</param>
+            <param name="view">正在处理的视图</param>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.ViewFilterHandler.OnPreRender(System.Web.Mvc.ViewContext,Ivony.Html.Web.Mvc.JumonyView)">
+            <summary>
+            当视图被渲染前执行
+            </summary>
+            <param name="context">当前视图上下文</param>
+            <param name="view">正在处理的视图</param>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.ViewFilterHandler.OnPostRender(System.Web.Mvc.ViewContext,Ivony.Html.Web.Mvc.JumonyView)">
+            <summary>
+            当视图被渲染后执行
+            </summary>
+            <param name="context">当前视图上下文</param>
+            <param name="view">正在处理的视图</param>
+        </member>
+        <member name="P:Ivony.Html.Web.Mvc.ViewFilterHandler.IsReusable">
+            <summary>
+            重写 IsReusable 属性，始终返回 true。
+            </summary>
+        </member>
+        <member name="T:Ivony.Html.Web.Mvc.ViewFilterProvider">
+            <summary>
+            视图筛选器提供程序
+            </summary>
+        </member>
+        <member name="M:Ivony.Html.Web.Mvc.ViewFilterProvider.GetViewFilters(System.String)">
+            <summary>
+            获取指定虚拟路径的视图筛选器
+            </summary>
+            <param name="virtualPath">虚拟路径</param>
+            <returns>视图筛选器</returns>
+        </member>
+        <member name="P:Ivony.Html.Web.Mvc.ViewFilterProvider.VirtualPathProvider">
+            <summary>
+            获取当前的虚拟路径提供程序
             </summary>
         </member>
         <member name="T:Ivony.Html.Web.Mvc.ViewHandler">

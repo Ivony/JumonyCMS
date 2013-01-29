@@ -61,4 +61,10 @@
   <ItemGroup>
     <Build Include="Templates.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="CMS.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMS.publish.xml" />
+  </ItemGroup>
 </Project>

@@ -33,26 +33,42 @@
     <Reference Include="DbUtility.v2">
       <HintPath>..\packages\DbUtility2.2.0.10\lib\net40\DbUtility.v2.dll</HintPath>
     </Reference>
-    <Reference Include="Ivony.Core">
-      <HintPath>..\packages\JumonyCore.2.3.0\lib\Ivony.Core.dll</HintPath>
+    <Reference Include="Ivony.Core, Version=2.0.4777.26045, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Ivony.Html">
-      <HintPath>..\packages\JumonyCore.2.3.0\lib\Ivony.Html.dll</HintPath>
+    <Reference Include="Ivony.Html, Version=2.1.4777.26045, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.dll</HintPath>
     </Reference>
-    <Reference Include="Ivony.Html.Forms">
-      <HintPath>..\packages\JumonyForMVC.3.0.1-alpha\lib\Ivony.Html.Forms.dll</HintPath>
+    <Reference Include="Ivony.Html.Forms, Version=1.1.4777.26047, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="Ivony.Html.Parser">
-      <HintPath>..\packages\JumonyCore.2.3.0\lib\Ivony.Html.Parser.dll</HintPath>
+    <Reference Include="Ivony.Html.JQuery">
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.JQuery.dll</HintPath>
     </Reference>
-    <Reference Include="Ivony.Html.Parser.Regulars">
-      <HintPath>..\packages\JumonyCore.2.3.0\lib\Ivony.Html.Parser.Regulars.dll</HintPath>
+    <Reference Include="Ivony.Html.Parser, Version=2.2.4777.26047, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.Parser.dll</HintPath>
     </Reference>
-    <Reference Include="Ivony.Html.Web">
-      <HintPath>..\packages\JumonyForMVC.3.0.1-alpha\lib\Ivony.Html.Web.dll</HintPath>
+    <Reference Include="Ivony.Html.Parser.Regulars, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.Parser.Regulars.dll</HintPath>
     </Reference>
-    <Reference Include="Ivony.Html.Web.Mvc">
-      <HintPath>..\packages\JumonyForMVC.3.0.1-alpha\lib\Ivony.Html.Web.Mvc.dll</HintPath>
+    <Reference Include="Ivony.Html.Styles">
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.Styles.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Html.Templates">
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.Templates.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Html.Web, Version=2.0.4777.26047, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Html.Web.Mvc, Version=2.0.4777.26047, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Jumony.2.5.0.0-alpha\lib\Ivony.Html.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ivony.Html.Styles</name>
+    </assembly>
+    <members>
+        <member name="T:Ivony.Html.Styles.CssLengthValue">
+            <summary>
+            CSS长度值
+            </summary>
+        </member>
+        <member name="M:Ivony.Html.StyleExtensions.Style``1(``0,System.String)">
+            <summary>
+            对元素设置指定样式
+            </summary>
+            <typeparam name="T">元素实例类型</typeparam>
+            <param name="element">要设置样式的元素</param>
+            <param name="styleExpression">样式表达式</param>
+            <returns>设置了样式的元素</returns>
+        </member>
+    </members>
+</doc>

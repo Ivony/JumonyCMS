@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="5154393a-6e30-4853-bc2b-baae8c5455b7" ChangeDateTime="01/29/2013 06:57:34">
+    <Property Name="ElementName" Value="[dbo].[Templates].[filepath]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Templates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="virtualPath" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="adb1c163-feab-494f-9f3f-f07b1e0ee610" ChangeDateTime="01/29/2013 08:02:13">
+    <Property Name="ElementName" Value="[dbo].[Site].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Site]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SiteName" />
+  </Operation>
+</Operations>
